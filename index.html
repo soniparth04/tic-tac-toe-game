@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic-Tac-Toe Game</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="msg-container hide">
-      <p id="msg">Winner</p>
-      <button id="new-btn">New Game</button>
-    </div>
-    <main>
-      <h1>Tic Tac Toe</h1>
-      <div class="container">
-        <div class="game">
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
-          <button class="box"></button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+    <br><br><br><br><br><br><br>
+        
+        <div id="mode-selector">
+            <label for="mode" style="color: black;">Game Mode:</label>
+            <select id="mode">
+                <option value="pvp">Player vs Player</option>
+                <option value="pva">Player vs AI</option>
+            </select>
         </div>
-      </div>
-      <button id="reset-btn">Reset Game</button>
-    </main>
+        <div id="turn"></div>
+            <div id="status"></div>
+        <div id="board" class="board"></div>
+        <div id="info">
+
+            <div id="score">
+                <div class="player-score" id="playerXScore">Player X: 0</div>
+                <div class="player-score" id="playerOScore">Player O: 0</div>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p id="modal-message"></p>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
